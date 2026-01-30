@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLTPS - GTPS Server</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Animasi RGB untuk judul utama */
+        @keyframes rgb-shift {
+            0% { color: #ff4d4d; text-shadow: 0 0 8px rgba(255, 77, 77, 0.5); }
+            25% { color: #4dff4d; text-shadow: 0 0 8px rgba(77, 255, 77, 0.5); }
+            50% { color: #4d4dff; text-shadow: 0 0 8px rgba(77, 77, 255, 0.5); }
+            75% { color: #ff4dff; text-shadow: 0 0 8px rgba(255, 77, 255, 0.5); }
+            100% { color: #ff4d4d; text-shadow: 0 0 8px rgba(255, 77, 77, 0.5); }
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 4em;
+            animation: rgb-shift 4s ease-in-out infinite;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #94a3b8;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            color: #cbd5e1;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #64748b;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #475569;
+            transform: translateY(-2px);
+        }
+
+        .server-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #10b981;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .config-block {
+            background-color: #0f172a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            overflow-x: auto;
+        }
+
+        /* Responsif untuk perangkat mobile */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+
+            .wrapper {
+                padding: 20px;
+                margin-top: 15px;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+    <!-- Import Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header dengan Judul RGB -->
+        <div class="header">
+            <h1>BOLTPS</h1>
+            <p>Server GTPS Terpercaya dengan Pengalaman Bermain Optimal</p>
+        </div>
+
+        <!-- Deskripsi Server -->
+        <div class="section">
+            <h2>📝 Tentang BOLTPS</h2>
+            <p>BOLTPS adalah server Growtopia Private Server (GTPS) yang dirancang untuk memberikan keseruan bermain yang tak terlupakan. Dengan sistem yang stabil, fitur lengkap, dan komunitas yang ramah, BOLTPS menjadi pilihan utama bagi pemain yang mencari kualitas dan keandalan dalam setiap sesi bermain. Teks judul menggunakan efek warna RGB yang dinamis untuk memberikan kesan modern dan menarik.</p>
+        </div>
+
+        <!-- Status Server -->
+        <div class="section">
+            <h2>🟢 Status Server</h2>
+            <div class="server-status">
+                <span class="status-indicator"></span>
+                <span>SERVER ONLINE & BERJALAN STABIL</span>
+            </div>
+        </div>
+
+        <!-- Link Unduhan Vhost -->
+        <div class="section">
+            <h2>📥 Unduh Vhost</h2>
+            <p>Unduh file vhost untuk menghubungkan perangkat Anda ke server BOLTPS dengan mudah:</p>
+            <a href="https://www.mediafire.com/file/n534zkhqh6fjwwe/BOLTPS.txt/file" target="_blank" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>
+                Unduh Vhost BOLTPS
+            </a>
+        </div>
+
+        <!-- Konfigurasi PTunnel & Windows -->
+        <div class="section">
+            <h2>⚙️ Konfigurasi Tambahan</h2>
+            
+            <!-- PTunnel -->
+            <div style="margin-bottom: 20px;">
+                <p>Salin link konfigurasi PTunnel untuk menghubungkan ke server:</p>
+                <button class="btn btn-secondary" onclick="copyToClipboard('ptunnel-config')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                    Copy PTunnel Link
+                </button>
+                <div class="config-block" id="ptunnel-config">https://dash.gtps.cloud/android/2449</div>
+            </div>
+
+            <!-- Windows Config -->
+            <div>
+                <p>Salin konfigurasi untuk sistem operasi Windows:</p>
+                <button class="btn btn-secondary" onclick="copyToClipboard('windows-config')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                    Copy Windows Config
+                </button>
+                <div class="config-block" id="windows-config">91.134.85.13 growtopia1.com
+91.134.85.13 growtopia2.com
+91.134.85.13 www.growtopia1.com
+91.134.85.13 www.growtopia2.com</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi menyalin ke clipboard dengan pesan konfirmasi
+        function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    // Tampilkan pesan sukses singkat
+                    const notification = document.createElement('div');
+                    notification.style.position = 'fixed';
+                    notification.style.bottom = '20px';
+                    notification.style.left = '50%';
+                    notification.style.transform = 'translateX(-50%)';
+                    notification.style.backgroundColor = '#10b981';
+                    notification.style.color = 'white';
+                    notification.style.padding = '10px 20px';
+                    notification.style.borderRadius = '8px';
+                    notification.style.boxShadow = '0 0 10px rgba(0,0,0,0.2)';
+                    notification.textContent = '✅ Teks berhasil disalin!';
+                    document.body.appendChild(notification);
+                    
+                    // Hapus pesan setelah 2 detik
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 2000);
+                })
+                .catch(err => {
+                    alert('❌ Gagal menyalin teks: ' + err);
+                });
+        }
+    </script>
+</body>
+                  </html>
+                  
